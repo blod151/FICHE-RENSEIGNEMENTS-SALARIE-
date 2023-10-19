@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+    <a href="https://urldefense.com/v3/__http://php*20pdf.php__;JQ!!JCruJraw!K4mFRMNEXlRVmnuEACvVV4AhC-noVFwqvZfVQNGzlarOoPX4v84PzqL71Md5vN3KgQceBayN9IfiQkUdUYg6lL-EkMQ$"></a>
+	<meta charset="UTF-8">
+    <title>CONTRAT DE PARTENARIAT COMMERCIAL</title>
+    <style>
+        body {
+        font-family: 'Open Sans', sans-serif;
+        }
+        .page-centree {
+            width: 100%; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background-color: #c0c4c7; 
+            padding: 50px; 
+        }
+        .theme-fonce {
+            background-color: #0d0f11; 
+            color:white;
+        }
+        .theme-clair {
+            background-color: #b9c0b3;
+            color:black;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .mon-bouton {
+            background-color: rgb(56, 37, 36);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .bouton {
+            background-color: #969da1;
+            color: rgb(255, 255, 255);
+        }
+        .separation {
+            width: 5px;
+            background-color: black;
+        }
+        .conteneur {
+            display: flex;
+            align-items: stretch;
+        }
+        .colonne {
+            flex: 1;
+            padding: 20px;
+        }
+        .colonne-gauche {
+            background-color: white; 
+        }
+        .colonne-droite {
+            background-color: white; 
+        }
+        .formulaire {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .champ {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 40%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .banniere {
+            background-color: #74818a; 
+            border-radius: 10px; 
+            padding: 10px; 
+            text-align: center; 
+            color: #fff; 
+        }
+        .banniere2 {
+            border-radius: 10px; 
+            padding: 3px; 
+            text-align: center; 
+        }
+    </style>
+	<script type="text/javascript">
+            function ajoutePartenaire(target, name) {
+            if (target == undefined) return;
+
+            const input = document.createElement('input');
+            input.type = "text"; 
+            input.placeholder = "Nom du partenaire";
+
+            if (name != undefined) {
+                const ndx = target.childElementCount / 2 + 1;
+                input.id = name + "-" + ndx;
+                input.name = name + "[]";
+            }
+
+            target.appendChild(input);
+
+            const lineBreak = document.createElement('br');
+            target.appendChild(lineBreak);
+        }
+		function supprimeDernier(target) {
+
+			if (target == undefined) return;
+			if (target.lastChild == undefined) return;
+			
+			target.removeChild(target.lastChild);
+			target.removeChild(target.lastChild);
+		}
+        function changerTheme() {
+        const body = document.getElementById('body');
+        const top = document.getElementById('top');
+        if (body.classList.contains('theme-fonce')) {
+            body.classList.remove('theme-fonce');
+            body.classList.add('theme-clair');
+            top.classList.remove('theme-fonce');
+            top.classList.add('theme-clair');
+        } else {
+            body.classList.remove('theme-clair');
+            body.classList.add('theme-fonce');
+            top.classList.remove('theme-clair');
+            top.classList.add('theme-fonce');
+        }
+    }
+	</script>
+    
+</head>
+<body id="body">
+    <form action="Formulaire2023.php" method="post">
+    <div class="page-centree theme-clair" id="top">
+            
+            <h1 class="banniere">CONTRAT DE PARTENARIAT COMMERCIAL</h1>
+            <br></br>
+            <div class="conteneur">
+                <div class="colonne colonne-gauche">
+                <center><h2>Cr&eacute;ation du contrat</h2></center>
+                <br>
+                <p>Fait le
+					<label for="date1"></label>
+					<input type="date" id="date1" name="date1" value="0000-00-00" min="2022-01-01" max="2026-12-31" required class="banniere2"></p>
+                    Nombre copies originales
+                    <label for="nombre1"></label>
+                    <input id="nombre1" name="nombre1"type="number" name="age" min="0" max="100" size="4" required>
+                
+
+                <br/>
+                <br/>
+
+                <button id="bouton1" type="button" class=bouton onclick="ajoutePartenaire(element1, 'texte11');">[ + ]</button>&nbsp;&nbsp;&nbsp;<button id="supprime1" type="button" class=bouton onclick="supprimeDernier(element1);">[ - ]</button>
+
+                <br/>
+                <br/>
+
+                <label for="texte11"></label>
+                <input type="text" id="texte11" name="texte11[]" placeholder="Nom du partenaire" required></input>
+
+                <div id="element1"></div>
+            </div>
+            <div class="separation"></div>
+            <div class="colonne colonne-droite">
+                <center>
+                    <h2>Compl&eacute;ments</h2></center>
+                   
+                        <div class="champ">
+                            <label for="texte2">Nom repr&eacute;sentant le patenariat</label>
+                            <input type="text" id="texte2" name="texte2" placeholder="Nom du repr&eacute;sentant" required>
+                        </div>
+                        <label for="date2">D&eacute;but partenariat:</label>
+                        <input type="date" id="date2" name="date2"value="0000-00-00"min="2022-01-01" max="2026-12-31" class="banniere2">
+                         <br></br>
+                         <label for="texte5">Nombre de signature requis sur un ch&egrave;que</label>
+                         <input type="number" id="texte2" name="texte5" min="0" max="100" size="4">
+                         <br></br>
+                         <label for="texte7">Etat r&eacute;gissant le contrat</label>
+                         <input type="text" id="texte7" name="texte7" size="15" placeholder="Nom de l'Etat" required></input>
+        </div>
+    </div>
+    <br></br>
+                
+    <div class="conteneur">
+        <div class="colonne colonne-gauche">
+            <center>
+                <h2>
+                    Nature des activit&eacute;s
+                </h2></center>
+                <br></br>
+                Termes du contrat accept&eacute;s par les partenaires 
+                <br></br>
+            <div id="form-container">
+            
+                    <label for="texte1"></label>
+                    <textarea id="texte1" name="texte1" cols="55" rows="9" placeholder="Termes du contrat accept&eacute;s par les partenaires" required></textarea>
+            
+            </div>
+            
+
+
+    </div>
+    <div class="separation"></div>
+    <div class="colonne colonne-droite">
+        <center>
+            <h2>Siege du partenariat</h2></center>
+            <form>
+                <div class="champ">
+                    <label for="texte3">Adresse:</label>
+                    <input type="text" id="texte3" name="texte3" placeholder="Adresse" required></input>
+                </div>
+    
+                <div class="champ">
+                    <label for="texte13">Ville :</label>
+                    <input type="text" id="texte13" name="texte13" placeholder="Ville " required>
+                </div>
+    
+                <div class="champ">
+                    <label for="texte14">Code Postal :</label>
+                    <input type="text" id="texte14" name="texte14" placeholder="Code postal" required>
+                </div>
+    
+                <div class="champ">
+                    <label for="texte15">Pays :</label>
+                    <input type="text" id="texte15" name="texte15" placeholder="Pays" required>
+                </div>
+            </form>
+    <div id="form-container">
+
+    </div>
+</div>
+</div>
+                <br></br>
+                <div class="conteneur">
+                    <div class="colonne colonne-gauche">
+                        <center>
+                        <h2>
+                            Clauses du partenariat
+                        </h2></center>
+                        <label for="texte10">Contribution des partenaires</label>
+                <textarea id="texte10" name="texte10" placeholder ="Contribution des partenaires" cols="55" rows="5" required></textarea>
+                <br></br>
+                        <label for="texte4">R&eacute;partition b&eacute;n&eacute;fice et perte</label>
+                        <textarea id="texte4" name="texte4" cols="55" rows="5" placeholder="Distribution des profits et des pertes" required></textarea>
+            
+            
+            
+                </div>
+                <div class="separation"></div>
+                <div class="colonne colonne-droite">
+                    <center>
+                        <h2>Clause de non-concurrence</h2></center>
+                        <br></br>
+                        <label for="texte6">Un partenaire qui se retire du partenariat ne doit pas s'engager directement ou
+                            indirectement dans une entreprise qui est ou serait en concurrence avec la nature des activit&eacute;s
+                            actuelles ou futures du partenariat pendant la p&eacute;riode suivante </label>
+                            <br></br>
+                        <input type=text id="texte6" name="texte6" size="10" placeholder="P&eacute;riode de non-concurrence" required></input>
+                <div id="form-container">
+                </div>
+            </div>
+        </div>
+        <br></br>
+        
+            <div class="colonne colonne-gauche">
+        
+                <br></br>
+                <img src="https://img.freepik.com/vector-premium/negocios-concepto-oficina-dos-hombres-negocios-dandose-mano_9026-69.jpg?size=338&ext=jpg&ga=GA1.1.1016474677.1697328000&semt=ais" alt="Description de l'image" width="400" height="400" style="float: right;">
+                <label for="texte8">Solennellement affirm&eacute; &agrave;</label>
+                <input type=text id="texte8" name="texte8" size="15" placeholder="Lieu de la r&eacute;alisation du contrat" required></input>
+                <br></br><br></br>
+                <button id="bouton3" type="button" class=bouton onclick="ajoutePartenaire(element3, 'texte12');">[ + ]</button>&nbsp;&nbsp;&nbsp;<button id="supprime3" type="button" class=bouton onclick="supprimeDernier(element3)">[ - ]</button> 
+                <br></br>
+                <label for="texte12">Sign&eacute;, valid&eacute; et livr&eacute; en pr&eacute;sence de:</label>
+                <input type=text id="texte12" name="texte12[]" placeholder = "Nom du partenaire" required></input>
+                <div id="element3"></div>
+                <br></br>
+                <label for="texte9">Je soussign&eacute;</label>
+                <input type=text id="texte9" name="texte9" size="20" placeholder = "Nom de l'auteur du document" required></input>
+                <br></br><br></br>
+                <input type="submit" class=mon-bouton value="Valider"></input>
+                <button id="boutontheme" type="button" class="mon-bouton" onclick="changerTheme();" style="float: right;">Changer le th&egrave;me</button>
+        <div class="separation"></div>
+        
+       
+        
+    </p>
+    </div>
+    </form>
+</body>
